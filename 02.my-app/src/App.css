@@ -1,0 +1,18 @@
+div {
+  background-color: rgb(255, 230, 230);
+  color: antiquewhite;
+  padding: 50px;
+  text-align: center;
+}
+h1 {
+  color: rgb(119, 119, 255);
+}
+h3 {
+  color: rgb(255, 0, 157);
+}
+.class1 {
+  color: rgb(48, 199, 149);
+}
+#id2 {
+  color: rgb(252, 180, 87);
+}
