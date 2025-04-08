@@ -1,0 +1,21 @@
+body {
+  padding: 20px;
+}
+
+.App {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+.App > section {
+  background-color: rgb(243, 223, 239);
+  border: 1px solid rgb(236, 185, 226);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+div button {
+  margin-left: 15px;
+}

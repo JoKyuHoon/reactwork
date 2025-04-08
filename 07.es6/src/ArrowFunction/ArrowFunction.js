@@ -11,6 +11,7 @@ function ArrowFun() {
     const func3 = (a, b) => a+b;
     console.log(`func3 : ${func3(1,2)}`);
 
+    // 매개변수가 1개일 때 소괄호() 생략가능
     const func4 = a => a+5
     console.log(`func4 : ${func4(7)}`);
 
@@ -19,6 +20,8 @@ function ArrowFun() {
             return num + value;
         }
     }
+    // func 5를 축약
+    const func6 = num => value => num+value;
 
     let func5Num = func5(5);
     let result = func5Num(7);
@@ -28,8 +31,8 @@ function ArrowFun() {
     result = func5(3)(4);
     console.log(`result : ${result}`);
 
-    const func6 = num => value => num + value;
-    console.log(`fucn6 : ${func6(1)(2)}`);
+    const func7 = num => value => num + value;
+    console.log(`fucn6 : ${func7(1)(2)}`);
     
 }
 export default ArrowFun;
