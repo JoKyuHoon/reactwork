@@ -13,8 +13,6 @@ const Header = () => {
             <img src={'https://www.tjoeun.co.kr/images/head_mcl_logo.jpg?v=20190918'} className='logo'/>
             <h1>Tjoeun</h1>
             <div>
-                <Form.Control size="sm" type="text" placeholder="ID" />
-                <Form.Control size="sm" type="password" placeholder="Password" />
                 <Button variant="outline-secondary">회원가입</Button>
                 <Button variant="outline-success" onClick={handleShow}>로그인</Button>
             </div>
@@ -23,7 +21,7 @@ const Header = () => {
     )
 }
 
-function Login({show, handleShow, handleClose}) {
+function Login({show, handleClose}) {
     return (
         <div>
         <Modal show={show} onHide={handleClose}>
