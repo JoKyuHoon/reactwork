@@ -34,7 +34,7 @@ function App() {
       DOM요소에 직접 접근가능
       재랜더링 되지 않음
   */ 
-  // 새로운 todolist 추가시 id의 번호 부여하는 변수
+  // 새로운 todolist 추가시 id의 번호 부여 변수
   const idRef = useRef(3);
 
   // 새로운 todolist 추가하는 함수
@@ -50,24 +50,31 @@ function App() {
 
   // 삭제시 isDone의 체크박스를 true로 바꾸기
   const onUpdate = (targetId) => {
-    setTodos (todos.map((todo) => { 
-      if(todo.id === targetId) {
+    console.log(targetId);
+    setTodos (todos.map((todo) => {
+      if(todo.id == targetId) {
         return {
-          ...todo, 
+          ...todo,
           isDone : !todo.isDone
         }
-      } 
-     return todo;
-      // todo.id === targetId ? {...todo, isDone: !todo.isDone} : todo
-    })
-  )}
-  
-  
+      }
+      return todo;
+    }))
+    // 삼항 연사자로 변경하면
+    // setTodos (todos.map((todo) => todo.id == targetId ? {...todo, isDone : !todo.isDone} : todo ))
+  }
+
+  // 삭제하기
+  const onDelete = (targetId) => {
+    setTodos(todos.filter((todo) => todo.id != targetId))
+  }
+
+
   return (
     <div className="App">
       <Header/>
       <Editor onCreate={onCreate}/>
-      <List todos={todos}/>
+      <List todos={todos} onUpdate={onUpdate} onDelete={onDelete}/>
     </div>
   );
 }
