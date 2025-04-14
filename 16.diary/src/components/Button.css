@@ -1,0 +1,15 @@
+.button {
+    background-color: rgb(201, 201, 201);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button_green {
+    background-color: rgb(99, 192, 99);
+    color: white;
+}
+.button_hotpink {
+    background-color: hotpink;
+    color: white;
+}
