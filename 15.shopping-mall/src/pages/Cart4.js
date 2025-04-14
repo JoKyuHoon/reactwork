@@ -1,6 +1,6 @@
 import {Table, Button} from 'react-bootstrap';
 import {useDispatch, useSelector} from 'react-redux';
-import { changeName, ageUpdate } from '../store/userSlice';
+import { updatename, ageUpdate  } from '../store/userSlice';
 import { countUpdate } from '../store/store';
 /*
     * Redux 변경하기
