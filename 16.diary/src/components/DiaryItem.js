@@ -1,12 +1,24 @@
-const DiaryItem = ({id, createDate, emotionId, content}) => {
-    const date = new Date(createDate).toLocaleDateString();
-    return (
-        <div>
-            <h3>{date}</h3>
-            <p>오늘의 기분 : {emotionId}</p>
-            <p>{content}</p>
-        </div>
-    );
-};
+import { useNavigate } from "react-router-dom";
+import { getEmotionImg } from "../util/emotion-img";
+import Button from "./Button";
+import './DiaryItem.css'
 
+const DiaryItem = ({id, emotionId, createDate, content}) => {
+    const nav = useNavigate();
+    return (
+        <div className="DiaryItem">
+            <div className="img_section">
+                <img src={getEmotionImg(emotionId)} alt="" />
+            </div>
+            <div className="info_section">
+                <div>{new Date(createDate).toLocaleDateString()}</div>
+                <div>{content}</div>
+            </div>
+            <div className="button_section">
+                <Button text={"수정하기"} 
+                onClick={() => nav(`/edit/${id}`)}/>
+            </div>
+        </div>
+    )
+}
 export default DiaryItem;

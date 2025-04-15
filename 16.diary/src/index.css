@@ -18,9 +18,25 @@ html, body {
   background-color: rgb(255, 255, 255);
 }
 
+button, select {
+  font-family: inherit;
+  font-size: 25px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+#root {
+  background-color: white;
+  width: 600px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0 20px;
+  box-shadow: lightgray 0px 0px 10px 0px;
+}
 
+h4 {
+  font-size: 20px;
+}

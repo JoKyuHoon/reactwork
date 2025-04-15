@@ -1,0 +1,23 @@
+.Edit {
+    text-align: center;
+    
+}
+
+.editor_btn {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.emotion_list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+
+  
+ 
+  
