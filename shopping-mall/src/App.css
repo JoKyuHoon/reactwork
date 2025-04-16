@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.main-bg {
+  height: 400px;
+  
+  /* background-image: url("./img/main_bg.avif"); */
+
+  /* bublic/img에 이미지를 넣었을 때 */
+  background-image: url('./img/main_bg.PNG');
+  
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.hover-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-img:hover {
+  transform: scale(1.05); /* 이미지 살짝 확대 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+  cursor: pointer;
+}
+
+.product-card {
+  width: 220px;
+  border: 1px solid #eee;
+  padding: 10px;
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+}
+
+.price-tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: white;
+  padding: 2px 6px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.product-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail img {
+  margin-top: 50px;
+  width: 30%;
+}
+.detail_text {
+  margin-top: 50px;
+  width: 20%;
+  text-align: center;
+}
+
+.detail_text > * {
+  margin-bottom: 30px;
+}
+
+.deNav {
+  margin: 50px 0;
+}
+
+/* 애니메이션 주기 */
+.start {
+  opacity: 0;
+}
+.end {
+  opacity: 1;
+  transition: opacity 1s;
+}
